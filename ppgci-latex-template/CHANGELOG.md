@@ -4,7 +4,7 @@ Este arquivo registra as principais alterações realizadas no template LaTeX do
 
 O histórico segue, de forma adaptada, as convenções de versionamento semântico (Semantic Versioning).
 
-## [7.0.0] - 2026-11-13
+## [7.0.0] - 2026-11-05
 
 ### Versão inicial pública
 
