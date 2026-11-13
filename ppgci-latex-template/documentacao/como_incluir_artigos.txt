@@ -1,0 +1,41 @@
+Para incluir artigos (em PDF) caso o trabalho utilize artigos na estrutura.
+
+{\centering\textbf{\MakeUppercase{Título do Artigo 01}}\par} %Título Artigo 1
+\vspace{1cm} 
+%Conteúdo Artigo 1
+Authors: {Preencher com Nome dos Autores}\\[0.5cm]
+Journal: \textbf{Preencher com Nome do Journal}\\[0.5cm]
+Publication Date: {30 February 2026}\\[0.5cm]
+DOI: {https://doi.org/preeencher.com.doi.do.artigo.01}
+
+\clearpage
+
+\includepdf[pages=-]{figuras/artigo01} %Inserir o artigo na pasta figuras (nomear como artigo01)
+
+\chapter{Artigo 2}  %Caso a tese utilize na estrutura artigos
+
+{\centering\textbf{\MakeUppercase{Título do Artigo 01}}\par} %Título Artigo 2
+\vspace{1cm} 
+%Conteúdo Artigo 2
+Authors: {Preencher com Nome dos Autores}\\[0.5cm]
+Journal: \textbf{Preencher com Nome do Journal}\\[0.5cm]
+Publication Date: {30 February 2026}\\[0.5cm]
+DOI: {https://doi.org/preeencher.com.doi.do.artigo.02}
+
+\clearpage
+
+\includepdf[pages=-]{figuras/artigo02} %Inserir o artigo na pasta figuras (nomear como artigo02)
+
+\chapter{Artigo 3}  %Caso a tese utilize na estrutura artigos
+
+{\centering\textbf{\MakeUppercase{Título do Artigo 03}}\par} %Título Artigo 3
+\vspace{1cm} 
+%Conteúdo Artigo 3
+Authors: {Preencher com Nome dos Autores}\\[0.5cm]
+Journal: \textbf{Preencher com Nome do Journal}\\[0.5cm]
+Publication Date: {30 February 2026}\\[0.5cm]
+DOI: {https://doi.org/preeencher.com.doi.do.artigo.03}
+
+\clearpage
+
+\includepdf[pages=-]{figuras/artigo03} %Inserir o artigo na pasta figuras (nomear como artigo03)

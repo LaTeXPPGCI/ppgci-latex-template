@@ -1,0 +1,8 @@
+Posicionadores de figuras/tabelas LaTeX:
+
+h → here: tenta colocar a figura exatamente no ponto do texto.
+t → top: permite colocar no topo da página.
+b → bottom: permite colocar no final da página.
+p → page: permite colocar em uma página só de figuras/tabelas.
+H → here forçado (pacote float): coloca exatamente aqui, ignorando decisões do LaTeX.
+! → override: ignora restrições de espaçamento do LaTeX, tornando h/t mais “flexível”.

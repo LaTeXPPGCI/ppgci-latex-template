@@ -1,0 +1,8 @@
+Escala prática:
+Valor	  Comportamento
+
+0	      Quebra livremente (padrão)
+1000	  Normal
+3000	  Evita um pouco
+8000	  Evita quase sempre 
+10000	  Proíbe praticamente

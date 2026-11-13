@@ -1,0 +1,9 @@
+Se ocorrer inconsitÇência no oinglês substituir:
+\RequirePackage[english,brazilian]{babel}
+
+por:
+\if@english
+  \RequirePackage[english,brazilian]{babel}
+\else
+  \RequirePackage[brazilian,english]{babel}
+\fi

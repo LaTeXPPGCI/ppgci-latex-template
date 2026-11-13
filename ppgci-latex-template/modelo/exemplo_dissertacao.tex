@@ -1,0 +1,457 @@
+\documentclass[diss,capa,times,english]{ppgci}
+%Remova english no \documentclass se optar pelo português
+%Substitua times por arial caso queira mudar a fonte
+
+\usepackage{microtype} %Melhorias de justificação e espaçamento tipográfico
+\usepackage{enumerate} %Personalizar listas (a, b, c, i, ii, etc.)
+\usepackage{pdfpages} %Inserir páginas de arquivos PDF no documento
+\usepackage{multirow} %Mesclar linhas em tabelas
+\usepackage{comment}  %Adicionar e ocultar blocos de comentário
+\usepackage{longtable} %Tabelas longas com quebra automática de página
+\usepackage{booktabs} %Melhorar estilo de tabelas
+\usepackage{pdflscape} %Permitir rotacionar a página inteira
+\usepackage{rotating} %Permitir rotacionar tabela 
+\usepackage{float} %Controlar de posicionamento de floats
+
+%Inserção da bibliografia
+\addbibresource{bibliografia.bib} 
+
+\hypersetup{
+    hidelinks, %Remove coloração e caixas
+    unicode=true, %Permite acentuação no bookmark
+    linktoc=all %Habilita link no nome e página do sumário
+}
+
+%Informações sobre a Pesquisa
+\areapesquisa{Gestão e Economia da Construção}
+\areapesquisaeng{Management and Economics of Construction} %Insira a área de pesquisa em inglês
+
+\titulo{Título do Trabalho} 
+\tituloeng{Title of the Work} %Insira o título em inglês
+
+\author{Wojciechowski}{Anderson Martins} 
+\email{andersoncivil3@gmail.com}
+
+\advisor[Prof.]{Isatto}{Eduardo Luis}{Dr., UFRGS, Brasil}
+%\advisor[Prof.]{Isatto}{Eduardo Luis}{Dr., UFRGS, Brasil}
+%\coadvisor[Prof.]{Formoso}{Carlos Torres}{Dr., UFRGS, Brasil} %Descomente caso tenha coorientador
+%\coadvisor[Prof.]{Formoso}{Carlos Torres}{Dr., UFRGS, Brasil}
+
+%Palavras-chave em PT_BR
+%use letras minúsculas seguidas por ;
+%a última terminada por .
+\keyword{palavrachave-um;}
+\keyword{palavrachave-dois;}
+\keyword{palavrachave-tres;}
+\keyword{palavrachave-quatro.}
+
+%Palavras-chave em EN_US
+\keywordeng{keyword-one;}
+\keywordeng{keyword-two;}
+\keywordeng{keyword-three;}
+\keywordeng{keyword-four.}
+
+\begin{document}
+
+%\renewcommand{\advisorname}{Orientadora}           %Descomente caso tenha orientadora
+%\renewcommand{\coadvisorname}{Coorientadora}      %Descomente caso tenha coorientadora
+
+\maketitle 
+
+\sloppy
+
+\fichacatalografica
+
+%Composição da Banca Examinadora
+\coordenador{Lélio Antônio Teixeira Brito}
+\begin{aprovacao}{30}{2}{2026}
+\noindent \textbf {Prof. XXX (Universidade)}\\
+Título, Universidade, País.\\[1cm] 
+
+\noindent \textbf {Prof. XXX (Universidade)}\\
+Título, Universidade, País.\\[1cm] 
+
+\noindent \textbf {Prof. XXX (Universidade)}\\
+Título, Universidade, País.
+\end{aprovacao}
+
+%Opcional
+\begin{dedicatoria}
+  Dedico\ldots 
+\end{dedicatoria}
+
+%Opcional
+\begin{agradecimentos}
+  Agradeço\ldots 
+\end{agradecimentos}
+
+%Opcional
+\begin{epigrafe}
+    \epigrafetexto{Começar é a parte mais importante do trabalho.}
+    \epigrafeautor{Platão}
+\end{epigrafe}
+
+%Opcional
+%\forcabrabstract %Caso o trabalho seja apresentado em inglês, a seção “RESUMO” é dispensável. Se quiser mostrar o resumo em português também, descomente.
+
+\hyphenpenalty=10000 %Justificar um texto sem utilizar hifenização
+\exhyphenpenalty=10000 %Controla quebras em hífens explícitos no texto
+
+%Resumo em Português (no máximo 500 palavras)
+\ifshowabstractpt
+\begin{abstract}
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.
+\end{abstract}
+\fi
+
+%Resumo em Inglês (no máximo 500 palavras)
+\begin{englishabstract}
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.
+\end{englishabstract}
+
+%Lista de Figuras
+\listoffigures
+
+%Lista de Tabelas
+\listoftables
+
+%Lista de Quadros - AMW/Marilton
+\listofquadros %Se optar pelo inglês não existirá lista de quadros, pois documentos em inglês não há distinção entre tabelas e quadros
+
+%lista de abreviaturas e siglas
+\begin{listofabbrv}{UFRGS}%coloque aqui a maior sigla para ajustar a distância
+    \item[ABNT] Associação Brasileira de Normas Técnicas
+    \item[DSR] Design Science Research
+    \item[EE] Escola de Engenharia
+    \item[NORIE] Núcleo Orientado para a Inovação da Construção
+    \item[PPGCI] Programa de Pós-Graduação em Engenharia Civil: Construção e Infraestrutura
+    \item[UFRGS] Universidade Federal do Rio Grande do Sul
+\end{listofabbrv}
+
+%Sumário
+\tableofcontents
+
+\chapter{Introdução} %Inglês: Introduction
+Este capítulo apresenta o contexto e a justificativa do tema proposto, os pressupostos da pesquisa, o problema de pesquisa (lacuna do conhecimento), as questões de pesquisa e os objetivos da pesquisa.
+
+Alguns comandos de formatação tipográfica que podem ser utilizados ao longo do texto. No entanto, em textos acadêmicos formais, recomenda-se o uso moderado desses recursos, para manter a padronização visual do documento. Entre os principais comandos estão: \emph{texto em itálico}, \textbf{texto em negrito}, \textbf{\emph{texto em itálico e negrito}}, \underline{texto sublinhado}, \textsc{texto em versalete}, \texttt{texto monoespaçado} e \small{texto em tamanho menor}.
+
+Também são apresentados exemplos de procedimentos para realizar citações no texto. Quando o autor é citado ao final da frase, a referência deve ser apresentada entre parênteses, indicando o sobrenome e o ano de publicação, separados por vírgula~\cite{Sacks2018}. Quando o nome do autor é mencionado no corpo do texto, utiliza-se o formato narrativo~\textcite{Ensafi2021}. 
+
+Para citações diretas, deve-se indicar a página consultada~\cite[p.45]{Borrmann2018}. No caso de múltiplas obras de um mesmo autor publicadas no mesmo ano, devem ser adotados identificadores alfabéticos~\cite{ABNT2022a,ABNT2022b}. Já para múltiplas obras de um mesmo autor publicadas em anos diferentes~\cite{ABNT2022a,ABNT2024}.
+
+Para citações de diferentes autores em uma mesma referência, elas devem ser apresentadas conjuntamente~\cite{Isatto2005,Ensafi2021,buildingSMART2024}. Por fim, para citações indiretas de outra fonte (citação da citação), utiliza-se o comando~\apud{Wojciechowski2025}{Wojciechowski2024}.
+
+\section{Contexto de Pesquisa} %Inglês: Research Context
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla. Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla. 
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla
+Conforme a Figura~\ref{Figuras/castelinhonorie}.
+
+% *** FIGURA ***
+\begin{figure}[!htb]
+    \centering 
+    \caption{Nome da figura}
+    \includegraphics[angle=0,scale=.16]{Figuras/castelinhonorie} \\
+    {\small Fonte: elaborada pelo autor.}
+    \label{Figuras/castelinhonorie}
+\end{figure}
+% *** FIGURA ***
+
+No LaTeX, [!htbp] define as opções de posicionamento de elementos flutuantes, como tabelas, quadros e figuras. Cada letra representa uma possibilidade conforme apresentado no Quadro~\ref{qua_posicionamento}.
+
+% *** QUADRO ***
+\begin{quadro}[!htbp]
+    \centering
+    \caption{Opções de posicionamento de elementos flutuantes no \LaTeX.}
+    \label{qua_posicionamento}
+    \begin{tabular}{|p{3cm}|p{3cm}|p{8cm}|}
+        \hline
+        \small \textbf{Código} & \small \textbf{Significado} & \small \textbf{Descrição}\\
+        \hline
+        {\small \texttt{h}} & {\small Here} & {\small Tentar posicionar no local onde o elemento foi inserido no texto.}\\
+        \hline
+        {\small \texttt{t}} & {\small Top} & {\small Posicionar no topo da página.}\\
+        \hline
+        {\small \texttt{b}} & {\small Bottom} & {\small Posicionar na parte inferior da página.}\\
+        \hline
+        {\small \texttt{p}} & {\small Page} & {\small Posicionar em uma página exclusiva para elementos flutuantes.}\\
+        \hline
+        {\small \texttt{!}} & {\small Override} & {\small Relaxar algumas restrições internas do \LaTeX{} para permitir o posicionamento.}\\
+        \hline
+        {\small \texttt{H}} & {\small Here (Forçado)} & {\small Fixar obrigatoriamente o elemento no local exato do texto.}\\
+        \hline
+    \end{tabular}
+    \vspace{2pt}
+    {\small Fonte: elaborado pelo autor.}
+\end{quadro}
+% *** QUADRO ***
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla. 
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla. 
+
+\section{Problema Prático} %Inglês: Practical Problem
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla
+
+\section{Problema de Pesquisa} %Inglês: Research Problem
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+
+\section{Questões de Pesquisa} %Inglês: Research Questions
+
+Com base no problema de pesquisa, foi definida a questão principal de pesquisa:
+
+\textbf{Questão principal?}
+
+Como desdobramento da questão principal, foram definidas as questões secundárias: 
+
+\begin{itemize}
+    \item[i.] Questão secundária 1?
+    \item[ii.] Questão secundária 2?
+    \item[iii.] Questão secundária 3?
+\end{itemize}
+
+\section{Objetivos de Pesquisa} %Inglês: Research Objectives
+
+Objetivo geral da pesquisa:
+
+\textbf{Objetivo geral.}
+
+Objetivos específicos da pesquisa:
+
+\begin{itemize}
+    \item[i.] Objetivo específico 1.
+    \item[ii.] Objetivo específico 2.
+    \item[iii.] Objetivo específico 3.
+\end{itemize}
+
+\section{Estrutura do Trabalho} 
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+
+\chapter{Revisão bibliográfica} %Inglês: Literature Review
+
+Escrever sobre o que se trata o capítulo.
+
+\section{Uma seção}
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.
+
+\subsection{Uma subseção}
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.
+
+\subsubsection{Uma subsubseção}
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla Figura~\ref{Figuras/fig_rotacionada}.
+
+% *** FIGURA ROTACIONADA ***
+\begin{landscape}
+    \begin{figure}[ht]
+        \centering 
+        \caption{Exemplo de figura em página rotacionada}
+        \includegraphics[angle=0,scale=0.6]{Figuras/fig_rotacionada}
+        \label{Figuras/fig_rotacionada}\\
+        {\small Fonte: elaborada pelo autor.}
+    \end{figure}
+\end{landscape}
+% *** FIGURA ROTACIONADA ***
+
+\chapter{Método de Pesquisa} %Inglês: Research Method
+
+Este capítulo apresenta o método que será seguido para o desenvolvimento desta pesquisa, incluindo a estratégia de pesquisa, o delineamento da pesquisa, as fontes de evidência a serem utilizadas e o cronograma de atividades previsto.
+
+\section{Estratégia de Pesquisa}
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+
+\section{Delineamento da Pesquisa}
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+
+\section{Fontes de Evidências}
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+
+\chapter{Resultados} %Inglês: Results
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla. Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla. 
+
+Uma tabela apresenta dados quantitativos, numéricos ou estatísticos submetidos a tratamento analítico. A Tabela~\ref{tab_dados} apresenta um exemplo de como criar uma tabela.
+
+% *** TABELA ***
+\begin{table}[ht]
+    \centering
+    \caption{Detalhes do artigo, status, periódicos e fator de impacto.}
+    \label{tab_dados}
+    \begin{tabular}{x{3,5cm}x{3,5cm}x{3,5cm}x{3,5cm}} %Largura útil = 14,3cm
+        \hline
+            {\small \textbf{Coluna 1}} & {\small \textbf{Coluna 2}} & {\small \textbf{Coluna 3}} & {\small \textbf{Coluna 4}}\\
+            \hline
+            {\small Linha 1} & {\small a} & {\small x} & {\small $\alpha$}\\
+            {\small Linha 2} & {\small b} & {\small y} & {\small $\beta$}\\
+            {\small Linha 3} & {\small c} & {\small z} & {\small $\gamma$}\\
+        \hline
+    \end{tabular}
+    \vskip 2pt
+    {\centering \small Fonte: elaborada pelo autor.}   
+\end{table}
+% *** TABELA ***
+
+Um quadro apresenta dados qualitativos, informações textuais, resumos ou comparações conceituais (sem foco em cálculos numéricos). O Quadro~\ref{qua_informacao} apresenta um exemplo de como criar um quadro. Vale ressaltar que, em documentos em inglês, não há distinção entre tabelas e quadros; deve-se utilizar apenas tabelas. 
+
+% *** QUADRO ***
+\begin{quadro}[!htbp]
+    \centering
+    \caption{Detalhes dos artigos, status, periódicos e fator de impacto.}
+    \label{qua_informacao}
+    \begin{tabular}{|x{5cm}|x{3cm}|x{3cm}|x{3cm}|}
+        \hline
+        {\small \textbf{Artigo}} & {\small \textbf{1}} & {\small \textbf{2}} & {\small \textbf{3}}\\
+        \hline
+        {\small Título do artigo} & {\small Título do Artigo 1} & {\small Título do Artigo 2} & {\small Título do Artigo 3}\\
+        \hline
+        {\small Status} & {\small Publicado} & {\small Submetido} & {\small Manuscrito}\\
+        \hline
+        {\small Periódico} & {\small Automation in Construction} & {\small Automation in Construction} & {\small Automation in Construction}\\
+        \hline
+        {\small Fator de impacto (IF)} & {\small 11,5} & {\small 11,5} & {\small 11,5}\\
+        \hline
+    \end{tabular}
+    \vspace{2pt}
+    {\small Fonte: elaborado pelo autor.}
+\end{quadro}
+% *** QUADRO ***
+
+Mais detalhes dos resultados nos Apêndices~\ref{apen_A},~\ref{apen_B} e no Anexo~\ref{anex_A}.
+
+\chapter{Conclusões (ou Considerações Finais)} %Inglês: Conclusions (or Final Considerations)
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla. Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla. 
+
+%Imprime as referências bibliográficas 
+\printbibliography      % biblatex
+
+%Apêndices (Opcional) - Material produzido pelo autor
+\apendices
+\chapter{Um Apêndice} \label{apen_A} 
+
+\includepdf[pages=-]{Figuras/apendiceA}
+
+\chapter{Outro Apêndice} \label{apen_B}
+
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+Bla blabla blablabla bla.
+
+%Anexos (Opcional) - Material produzido por outro
+\anexos
+\chapter{Forma de dividir o título do Anexo e Apêndice \texorpdfstring{\\}{} em duas linhas} \label{anex_A}
+
+\includepdf[pages=-]{Figuras/anexoA}
+
+\end{document}
+

@@ -1,0 +1,16 @@
+Tipo            Uso típico
+
+article         Artigo de periódico
+book            Livro completo
+inbook          Capítulo específico de livro
+incollection    Capítulo de coletânea
+inproceedings   Artigo de anais de congresso
+proceedings     Anais completos de conferência
+manual          Manual, guia, normas
+techreport      Relatório técnico com autor
+mastersthesis   Dissertação de mestrado
+phdthesis       Tese de doutorado
+misc            Decreto, Lei, Portaria, Ato Normativo, Sites, material genérico
+booklet         Folheto ou brochura
+unpublished     Trabalho não publicado
+default.type    Genérico (fallback)
